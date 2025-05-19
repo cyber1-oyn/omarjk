@@ -6,99 +6,55 @@
     <title>MY CV</title>
     <link rel="icon" type="image/png" href="cv-icon.png">
     <link rel="stylesheet" href="style.css">
-    <button id="toggleDarkMode">🌓 تبديل الوضع</button>
-
-
 </head>
 <body>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
     
     <h1>Eng.Omar Adel Omar Al-Khader<br/> Computer Engineer</h1>
     
-        <img src="400x300.JPG" width="400" height="500" alt="Example Image" alt="Example">
-        <br><br><br><br>
+    <img src="400x300.JPG" width="400" height="500" alt="Personal Photo">
     
-        <p>
-            <h2><li>CONTACT</li></h2>
-                <h3><ul>
-                    <li> Address: YEMEN , SAN'A ,32038 Y.S.H  </li><br>
-                    <li> phone number: (50x)-xxx-xxx  </li><br>
-                    <li><a href="https://email.google.com">omerjk84@gmail.com </a></li><br>
-                    <li><a href="https://x.com/?lang=en"> @twiter-screen-name </a></li><br> 
-                    <li> Bachelor's degree graduate from Karabuk University </li>
-                </ul></h3>
-        </p>
-    <br> <br> <br><br><br><br><br><br>
+    <div class="content-section">
+        <h2>CONTACT</h2>
+        <ul class="contact-list">
+            <li> Address: YEMEN , SAN'A ,32038 Y.S.H </li>
+            <li> Phone number: (50x)-xxx-xxx </li>
+            <li><a href="https://email.google.com">omerjk84@gmail.com</a></li>
+            <li><a href="https://x.com/?lang=en">@twiter-screen-name</a></li> 
+            <li> Bachelor's degree graduate from Karabuk University </li>
+        </ul>
+    </div>
 
-    <ul>
-        <h2><li>SKILLS</li></h2>
-             <h3><ul>
-                <li> Programming Language: Java, C, C++.</li>
-                <li> Frontend: Html, CSS, JavaScript.</li>
-                <li> Microsoft applications.</li>
-                <li> Database Design and SQL programming.</li>
-            </ul></h3>
+    <div class="content-section">
+        <h2>SKILLS</h2>
+        <ul>
+            <li> Programming Language: Java, C, C++.</li>
+            <li> Frontend: Html, CSS, JavaScript.</li>
+            <li> Microsoft applications.</li>
+            <li> Database Design and SQL programming.</li>
+        </ul>
+    </div>
 
-        <h2><li>Languages</li></h2>
-            <h3><ul> 
-                <li> Arabic </li>
-                <li> English </li>
-                <li> Turkish </li>
-            </ul></h3>
+    <div class="content-section">
+        <h2>Languages</h2>
+        <ul> 
+            <li> Arabic </li>
+            <li> English </li>
+            <li> Turkish </li>
+        </ul>
+    </div>
     
-         <h2><li>Hobbies</li></h2>
-            <h3><ul>
-                <li> Reading Books </li>
-                <li> Swimming </li>
-                <li> Volleyball</li>
-                
-            </ul></h3>
-    </ul>        
+    <div class="content-section">
+        <h2>Hobbies</h2>
+        <ul>
+            <li> Reading Books </li>
+            <li> Swimming </li>
+            <li> Volleyball</li>
+        </ul>
+    </div>
     
-<script>
-  const toggleBtn = document.getElementById('toggleDarkMode');
-  const body = document.body;
+    <script src="script.js">
 
-  // استرجاع الوضع من التخزين المحلي
-  if (localStorage.getItem("darkMode") === "true") {
-    body.classList.add("dark-mode");
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
-  });
-</script>
-
-<script>
-  const toggleBtn = document.getElementById('toggleDarkMode');
-  const body = document.body;
-
-  // إذا كان الوضع الليلي مفعل من قبل، فعّله مباشرة
-  if (localStorage.getItem("darkMode") === "true") {
-    body.classList.add("dark-mode");
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    // حفظ الخيار في التخزين المحلي
-    localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
-  });
-</script>
-
-
-<h2> Contact Form </h2>
-<form action="contact.php" method="POST">
-  <label>Name:</label><br>
-  <input type="text" name="name" required><br><br>
-
-  <label> Email: </label><br>
-  <input type="email" name="email" required><br><br>
-
-  <label> The message: </label><br>
-  <textarea name="message" rows="5" required></textarea><br><br>
-
-  <button type="submit"> Send </button>
-</form>
-
+    </script>
 </body>
 </html>
