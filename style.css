@@ -32,3 +32,38 @@ h2{
 a:link { color: #00FF00; } 
 a:visited { color: #00FF00; }
 a:hover { color: #ffffff; }
+
+/* الوضع النهاري - Light Mode (افتراضي) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* الوضع الليلي - Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #333;
+  color: #fff;
+}
+
+/* زر التبديل */
+#toggleDarkMode {
+  margin: 10px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px;
+}

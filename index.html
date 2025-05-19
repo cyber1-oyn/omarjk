@@ -6,6 +6,9 @@
     <title>MY CV</title>
     <link rel="icon" type="image/png" href="cv-icon.png">
     <link rel="stylesheet" href="style.css">
+    <button id="toggleDarkMode">🌓 تبديل الوضع</button>
+
+
 </head>
 <body>
     
@@ -51,5 +54,51 @@
             </ul></h3>
     </ul>        
     
+<script>
+  const toggleBtn = document.getElementById('toggleDarkMode');
+  const body = document.body;
+
+  // استرجاع الوضع من التخزين المحلي
+  if (localStorage.getItem("darkMode") === "true") {
+    body.classList.add("dark-mode");
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
+  });
+</script>
+
+<script>
+  const toggleBtn = document.getElementById('toggleDarkMode');
+  const body = document.body;
+
+  // إذا كان الوضع الليلي مفعل من قبل، فعّله مباشرة
+  if (localStorage.getItem("darkMode") === "true") {
+    body.classList.add("dark-mode");
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    // حفظ الخيار في التخزين المحلي
+    localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
+  });
+</script>
+
+
+<h2> Contact Form </h2>
+<form action="contact.php" method="POST">
+  <label>Name:</label><br>
+  <input type="text" name="name" required><br><br>
+
+  <label> Email: </label><br>
+  <input type="email" name="email" required><br><br>
+
+  <label> The message: </label><br>
+  <textarea name="message" rows="5" required></textarea><br><br>
+
+  <button type="submit"> Send </button>
+</form>
+
 </body>
 </html>
